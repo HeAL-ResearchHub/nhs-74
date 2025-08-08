@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NHS 1974 Project</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="assets/css/styles.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">NHS 1974</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+
+          <!-- Visualisations grouped in nav for quick access -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="ahaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Area Health Authority
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="ahaDropdown">
+              <li><a class="dropdown-item" href="aha-bars.html">Top Specialties (Beds & Consultants)</a></li>
+              <li><a class="dropdown-item" href="aha-beds.html">Hospital Beds</a></li>
+               <li><a class="dropdown-item" href="aha-consultants.html">Consultants</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="rhaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Regional Health Authority
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="rhaDropdown">
+              <li><a class="dropdown-item" href="rha-bars.html">Top Specialties (Beds & Consultants)</a></li>
+              <li><a class="dropdown-item" href="rha-beds.html">Hospital Beds</a></li>
+               <li><a class="dropdown-item" href="rha-consultants.html">Consultants</a></li>
+            </ul>
+          </li>
+
+          <!--
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="bg-light text-center py-5 mt-5">
+    <div class="container">
+      <h1 class="display-4">NHS 1974 Project</h1>
+      <p class="lead mb-0">
+        Documenting how the 1974 reorganisation of the NHS reshaped healthcare delivery, and long-term health outcomes across England and Wales.
+      </p>
+    </div>
+  </header>
+
+  <!-- VISUALISATIONS: moved up with segue -->
+  <section class="py-5 border-bottom">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="mb-2">Explore the Visualisations</h2>
+        <p class="text-muted mb-0">
+          Prefer to dive straight into the data? Start with the dashboards below, then scroll on for background, methods, and the team.
+        </p>
+      </div>
+
+      <div class="row g-4 mt-1">
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Area Health Authorities (AHA)</h5>
+              <p class="card-text text-muted">
+                Explore how the 98 AHAs (from 1974) redistributed resources and clinical capacity.
+              </p>
+              <div class="mt-auto">
+                <a href="aha-bars.html" class="btn btn-primary me-2">Top Specialities</a>
+                <a href="aha-consultants.html" class="btn btn-outline-primary me-2">Consultants</a>
+                <a href="aha-beds.html" class="btn btn-outline-primary">Hospital Beds</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Regional Health Authorities (RHA)</h5>
+              <p class="card-text text-muted">
+                Compare the pre-1974 system of 15 RHAs and the disparities the reform aimed to address.
+              </p>
+              <div class="mt-auto">
+                <a href="rha-bars.html" class="btn btn-primary me-2">Top Specialities</a>
+                <a href="rha-consultants.html" class="btn btn-outline-primary me-2">Consultants</a>
+                <a href="rha-beds.html" class="btn btn-outline-primary">Hospital Beds</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- small anchor to guide readers onward -->
+      <div class="text-center mt-4">
+        <a href="#background" class="link-primary text-decoration-none">
+          Or read the project background and methodology ↓
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BACKGROUND & METHODS -->
+  <section id="background" class="py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+          <h2>Project Background</h2>
+          <p>
+            The NHS 1974 Project examines the major restructuring of the National Health Service in England and Wales, the first since its creation in 1948. The reform replaced 15 Regional Health Authorities with 98 Area Health Authorities, aiming to deliver more equitable, locally aligned healthcare. Our research focuses on how these structural changes impacted variation in clinical practice and patient outcomes for the baby boomer generation.
+          </p>
+          <p>
+            Before 1974, access to specialist care in the NHS varied widely depending on geography and socioeconomic status. The reform was designed to unify service delivery and eliminate these inequalities by introducing co-terminous Area Health Authorities. This restructuring laid the foundation for more consistent access to care across the population. Using rich administrative and survey data, we examine how the reform influenced health outcomes.
+          </p>
+
+          <h2 class="mt-5">Research Methodology</h2>
+          <p>
+            Our approach combines historical administrative records with longitudinal cohort data to evaluate the long-term effects of the 1974 NHS reorganisation. Key elements include:
+          </p>
+          <ul>
+            <li>Mapping health authority boundaries before and after the reform</li>
+            <li>Linking area-level changes to individual patient data</li>
+            <li>Comparing treatment patterns across regions with differing clinical norms</li>
+            <li>Assessing whether access equalisation weakens the link between socioeconomic status and treatment decisions</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Research Team</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Principal Investigator</h5>
+              <p class="card-text mb-0">Dr Rachel Forshaw</p>
+              <p class="card-text">
+                <small class="text-muted">HeAL at Heriot-Watt University, r.forshaw@hw.ac.uk</small>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Research Collaborators</h5>
+              <p class="card-text mb-0">Professor Eoin McLaughlin (Co-I)</p>
+              <p class="card-text">
+                <small class="text-muted">HeAL at Heriot-Watt University, e.mclaughlin@hw.ac.uk</small>
+              </p>
+              <p class="card-text mb-0">Mr Joe Paul</p>
+              <p class="card-text">
+                <small class="text-muted">Research Assistant</small>
+              </p>
+
+            <p class="card-text mb-0">Ms Sheila Connolly</p>
+              <p class="card-text">
+                <small class="text-muted">HeAL Athena Swan intern</small>
+              </p>
+              </div>
+          </div>
+        </div>
+      </div>
+
+<!-- PUBLICATIONS & DOWNLOADS -->
+<section id="publications" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Publications & Working Papers</h2>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="list-group">
+
+          <!-- Paper 1 -->
+          <div class="list-group-item py-4">
+            <div class="d-flex w-100 justify-content-between align-items-start">
+              <div>
+                <h5 class="mb-1">The distribution of medical care following the 1974 NHS reorganisation</h5>
+                <p class="mb-2 text-muted">
+                  Forshaw (2025) — Working Paper
+                </p>
+              </div>
+              <span class="badge bg-secondary align-self-start">Preprint soon</span>
+            </div>
+
+            <div class="d-flex flex-wrap gap-2 mt-2">
+              <a href="#" class="btn btn-primary disabled" aria-disabled="true">
+                <i class="fa-solid fa-file-arrow-down me-1"></i> Download PDF
+              </a>
+              <a href="#" class="btn btn-outline-primary disabled" aria-disabled="true">
+                <i class="fa-solid fa-quote-left me-1"></i> BibTeX
+              </a>
+              <a href="aha-bars.html" class="btn btn-link">
+                View related AHA visualisations
+              </a>
+            	 <a href="rha-bars.html" class="btn btn-link">
+                View related RHA visualisations
+              </a>
+            </div>
+          </div>
+
+          <!-- Paper 2 -->
+          <div class="list-group-item py-4">
+            <div class="d-flex w-100 justify-content-between align-items-start">
+              <div>
+                <h5 class="mb-1">The Effects of Childhood Tonsillectomy</h5>
+                <p class="mb-2 text-muted">
+                  Forshaw &amp; McLaughlin (2025) — Working Paper
+                </p>
+              </div>
+              <span class="badge bg-secondary align-self-start">Preprint soon</span>
+            </div>
+
+            <div class="d-flex flex-wrap gap-2 mt-2">
+              <a href="#" class="btn btn-primary disabled" aria-disabled="true">
+                <i class="fa-solid fa-file-arrow-down me-1"></i> Download PDF
+              </a>
+              <a href="#" class="btn btn-outline-primary disabled" aria-disabled="true">
+                <i class="fa-solid fa-quote-left me-1"></i> BibTeX
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Optional note -->
+        <p class="text-center text-muted mt-3 mb-0">
+          Preprints will be available here upon release. Follow the links above for related dashboards.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- FOOTER -->
+<div class="bg-dark text-light mt-5">
+  <footer class="py-4">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p class="mb-1">&copy; 2025 NHS 1974 Research Project</p>
+          <small class="text-light">
+            Supported by BA/Leverhulme Trust (Grant SRG23-230812), SoSS Athena SWAN Widening Participation Summer UG Bursary, HeAL at Heriot-Watt
+          </small>
+        </div>
+        <div class="col-md-6 text-md-end mt-3 mt-md-0">
+          <a href="#" class="text-light me-3" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="#" class="text-light me-3" aria-label="Twitter / X"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-light" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
